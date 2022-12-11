@@ -63,7 +63,7 @@ public class WordIndexer {
           			// If the word is not in the treemap add it to the map
           			if (!wordCounts.containsKey(word)) {
           				WordInfo newWordInfo = new WordInfo(1, lineNum, wordNum);
-            			wordCounts.put(word, newWordInfo);
+            				wordCounts.put(word, newWordInfo);
           			} 
           			else {
           				// If the word is in the map increment it's occurence count
@@ -71,7 +71,7 @@ public class WordIndexer {
           				WordInfo temp = wordCounts.get(word);
           				temp.incrementOccurenceCount();
           				temp.addOccurrence(lineNum, wordNum);
-            			wordCounts.put(word, temp);
+            				wordCounts.put(word, temp);
           			}
           			// Increment the word number
           			wordNum += 1;
